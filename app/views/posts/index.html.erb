@@ -1,0 +1,8 @@
+<% @posts.each do |post| %>
+  <h2><%= post.title %></h2>
+  <p><strong>Nickname:</strong> <%= post.nickname %></p>
+  <p><%= post.body %></p>
+  <p><strong>Count Down To:</strong> <%= post.count_down_to.strftime('%Y-%m-%d %H:%M:%S') %></p>
+  <hr>
+<% end %>
+

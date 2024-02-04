@@ -1,0 +1,16 @@
+<%= form_with(model: @post, url: posts_path, method: 'post') do |form| %>
+  <%= form.label :nickname %>
+  <%= form.text_field :nickname %>
+
+  <%= form.label :title %>
+  <%= form.text_field :title %>
+
+  <%= form.label :body %>
+  <%= form.text_area :body %>
+
+  <%= form.label :count_down_to %>
+  <%= form.datetime_field :count_down_to %>
+
+  <%= form.submit 'post_article' %>
+<% end %>
+
