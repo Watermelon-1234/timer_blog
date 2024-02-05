@@ -1,12 +1,18 @@
+<h1>Team 2 燒機部落格</h1>
+<button type="button"  onclick="location.href='/posts/new'">去發文</button>
 <% @posts.each do |post| %>
-  <h2><%= post.title %></h2>
-  <p><strong>Nickname:</strong> <%= post.nickname %></p>
-  <p><%= post.body %></p>
-  <% if post.count_down_to %>
-    <p><strong>Count Down To:</strong> <%= post.count_down_to.strftime('%Y-%m-%d %H:%M:%S') %></p>
-  <% else %>
-    <p><strong>Count Down To:</strong> Not specified</p>
+  <% if post.nickname.present? && post.count_down_to.present? && post.title.present? && post.body.present? %>
+    <h2><%= post.title %></h2>
+      <p><strong>Nickname:</strong> <%= post.nickname %></p>
+    <p><%= post.body %></p>
+    <% if post.count_down_to.present? %>
+           <% if post.count_down_to > @current_time %>
+            <p><strong>Count Down To:</strong> <%= time_ago_in_words(post.count_down_to) %> remaining</p>
+          <% else %>
+            <p><strong>Count Down To:</strong> Ended</p>
+          <% end %>
+    <% end %>
+    <hr>
   <% end %>
-  <hr>
 <% end %>
 
