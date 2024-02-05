@@ -2,7 +2,11 @@
   <h2><%= post.title %></h2>
   <p><strong>Nickname:</strong> <%= post.nickname %></p>
   <p><%= post.body %></p>
-  <p><strong>Count Down To:</strong> <%= post.count_down_to.strftime('%Y-%m-%d %H:%M:%S') %></p>
+  <% if post.count_down_to %>
+    <p><strong>Count Down To:</strong> <%= post.count_down_to.strftime('%Y-%m-%d %H:%M:%S') %></p>
+  <% else %>
+    <p><strong>Count Down To:</strong> Not specified</p>
+  <% end %>
   <hr>
 <% end %>
 

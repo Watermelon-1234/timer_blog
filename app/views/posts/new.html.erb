@@ -2,14 +2,21 @@
   <%= form.label :nickname %>
   <%= form.text_field :nickname %>
 
+  <br>
+
   <%= form.label :title %>
   <%= form.text_field :title %>
+
+  <br>
 
   <%= form.label :body %>
   <%= form.text_area :body %>
 
+  <br>
+
   <%= form.label :count_down_to %>
   <%= form.datetime_field :count_down_to %>
+  <br>
 
   <%= form.submit 'post_article' %>
 <% end %>
