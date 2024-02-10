@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+/ Add the following line to import Bootstrap styles */
+/*= require bootstrap */
+

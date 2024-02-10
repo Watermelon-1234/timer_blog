@@ -1,0 +1,87 @@
+/* app/assets/stylesheets/custom_styles.css */
+
+body {
+  background-color: #f4f4f4;
+}
+
+.blog-title {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  background-color: #d9edf7; /* Bootstrap's info color */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.btn {
+  background-color: #5bc0de; /* Bootstrap's primary color */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.blog-post {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.post-title {
+  color: #31708f; /* Bootstrap's info color */
+}
+
+.post-nickname {
+  font-weight: bold;
+}
+
+.post-body {
+  color: #555;
+}
+
+.countdown {
+  font-size: 1.2em;
+  color: #d9534f; /* Bootstrap's danger color */
+}
+
+.post-divider {
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.post-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.btn-danger {
+  background-color: #d9534f; /* Bootstrap's danger color */
+  color: #fff;
+  border: none;
+}
+
+.btn-primary {
+  background-color: #5bc0de; /* Bootstrap's primary color */
+  color: #fff;
+  border: none;
+}

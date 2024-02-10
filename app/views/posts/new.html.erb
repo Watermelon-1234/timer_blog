@@ -1,28 +1,31 @@
 <%= stylesheet_link_tag 'custom_styles', 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-<h1>發文囉</h1>
-<button type="button" class="btn btn-danger" onclick="location.href='/../../'">我不發文啦！讓我回首頁</button>
-<%= form_with(model: @post, url: posts_path, method: 'post') do |form| %>
-  <%= form.label :nickname %>
-  <%= form.text_field :nickname %>
+<h1>發文囉發文囉發文囉</h1>
+<%= form_with(model: @post, url: posts_path, method: 'post', html: { class: 'post-form' }) do |form| %>
+  <div class="form-group">
+    <%= form.label :nickname %>
+    <%= form.text_field :nickname, class: 'form-control' %>
+  </div>
 
-  <br>
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: 'form-control' %>
+  </div>
 
-  <%= form.label :title %>
-  <%= form.text_field :title %>
+  <div class="form-group">
+    <%= form.label :body %>
+    <%= form.text_area :body, class: 'form-control' %>
+  </div>
 
-  <br>
+  <div class="form-group">
+    <%= form.label :count_down_to %>
+    <%= form.datetime_field :count_down_to, class: 'form-control' %>
+  </div>
 
-  <%= form.label :body %>
-  <%= form.text_area :body %>
-
-  <br>
-
-  <%= form.label :count_down_to %>
-  <%= form.datetime_field :count_down_to %>
-  <br>
-
-  <%= form.submit 'post_article' %>
+  <div class="form-group">
+    <%= form.submit 'Post Article', class: 'btn btn-primary btn-block' %>
+  </div>
 <% end %>
-<p>如果有漏打 將不會顯示在首頁！</a>
-<button type="button"  onclick="location.href='/../../'">我不發文了！讓我回首頁</a>
+
+<p>如果有漏打，將不會顯示在首頁！</p>
+<button type="button" class="btn btn-danger btn-block" onclick="location.href='/../../'">我不發文了！讓我回首頁</button>
 

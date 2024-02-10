@@ -2,14 +2,15 @@
 <h1 class="blog-title">Team 2 燒機部落格</h1>
 <%= stylesheet_link_tag 'custom_styles', 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 <button type="button" class="btn btn-primary" onclick="location.href='/posts/new'">去發文</button>
-
+<br>
+<br>
 <% @posts.each do |post| %>
   <% if post.nickname.present? && post.count_down_to.present? && post.title.present? && post.body.present? %>
     <div class="blog-post">
       <h2 class="post-title"><%= post.title %></h2>
       <p class="post-nickname"><strong>Nickname:</strong> <%= post.nickname %></p>
       <p class="post-body"><%= post.body %></p>
-      <% if post.count_down_to.present? %>
+      <% if post.count_down_to %>
         <% if post.count_down_to > @current_time %>
           <p class="countdown"><strong>Count Down To:</strong> <%= time_ago_in_words(post.count_down_to) %> remaining</p>
         <% else %>
